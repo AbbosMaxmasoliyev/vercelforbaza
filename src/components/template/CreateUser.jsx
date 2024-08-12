@@ -84,7 +84,7 @@ const CreateUser = () => {
             onDialogClose()
         } catch (error) {
 
-            openNotification("error", "Xatolik bor")
+            openNotification("danger", "Xatolik bor")
         }
         setDisabled(false)
 

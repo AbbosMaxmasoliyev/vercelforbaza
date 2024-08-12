@@ -69,7 +69,7 @@ const Managers = () => {
             setUpdateShow(true)
         } catch (error) {
             console.log(error);
-            openNotification("error", "Malumotlarni olishda xatolik")
+            // openNotification("danger", "Malumotlarni olishda xatolik")
         }
     }
     useEffect(() => {

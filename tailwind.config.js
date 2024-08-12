@@ -41,10 +41,6 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
-      mont: [
-        "Montserrat",
-        "sans-serif"
-      ]
     },
     screens: {
       xs: '576',
@@ -77,10 +73,10 @@ module.exports = {
 
       const colorMap = Object.keys(colors)
         .map(color => ({
-          [`.border-t-${color}`]: { borderTopColor: colors[color] },
-          [`.border-r-${color}`]: { borderRightColor: colors[color] },
-          [`.border-b-${color}`]: { borderBottomColor: colors[color] },
-          [`.border-l-${color}`]: { borderLeftColor: colors[color] },
+          [`.border-t-${color}`]: {borderTopColor: colors[color]},
+          [`.border-r-${color}`]: {borderRightColor: colors[color]},
+          [`.border-b-${color}`]: {borderBottomColor: colors[color]},
+          [`.border-l-${color}`]: {borderLeftColor: colors[color]},
         }));
       const utilities = Object.assign({}, ...colorMap);
 

@@ -81,7 +81,7 @@ const UserItem = () => {
             setUpdateShow(true)
         } catch (error) {
             console.log(error);
-            openNotification("error", "Malumotlarni olishda xatolik")
+            // openNotification("danger", "Malumotlarni olishda xatolik")
         }
     }
     useEffect(() => {
@@ -183,7 +183,7 @@ const UserItem = () => {
                     {
                         data?.map((user, index) => {
                             return <Tr>
-                                <Td>{((page-1) * (selectValue)) + index+1}</Td>
+                                <Td>{((page - 1) * (selectValue)) + index + 1}</Td>
                                 <Td>{user.full_name}</Td>
                                 <Td>{formattedPhoneNumber(user.phone_number)}</Td>
                                 <Td> <span className="text-center w-full block">{user.region}</span></Td>
@@ -219,18 +219,17 @@ const UserItem = () => {
                 />
                 <div className='relative w-[120px]'>
                     <div className='absolute top-0'>
-                        <Select
+                        <select
+                            className='mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring focus:border-blue-300 bg-transparent '
+                            onChange={(e) => onSelectChange(e.target.value)}
+                        >
 
-                            size="sm"
-                            isSearchable={false}
-                            value={pageSizeOption.filter(
-                                (option) =>
-                                    option.value ==
-                                    selectValue
-                            )}
-                            options={pageSizeOption}
-                            onChange={(option) => onSelectChange(option?.value)}
-                        />
+                            {
+                                pageSizeOption.map((page) => (
+                                    <option value={page.value}>{page.label}</option>
+                                ))
+                            }
+                        </select>
                     </div>
                 </div>
             </div>

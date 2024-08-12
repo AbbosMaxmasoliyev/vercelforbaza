@@ -104,7 +104,7 @@ const UpdateUser = ({ userData, show, setShow, removeId, submitNext }) => {
             submitNext()
 
         } catch (error) {
-            openNotification("error", "Xatolik bor");
+            openNotification("danger", "Xatolik bor");
         }
         setDisabled(false);
     };

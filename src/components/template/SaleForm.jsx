@@ -29,7 +29,7 @@ const MyForm = ({ disabled, id, submitNext }) => {
                 submitNext()
             }
         } catch (error) {
-            openNotification("error", "Buyurtma yaratishda xatolik")
+            openNotification("danger", "Buyurtma yaratishda xatolik")
         }
     };
 

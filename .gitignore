@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.env
 
 # testing
 /coverage
@@ -12,7 +13,6 @@
 /build
 
 # misc
-safelist.txt
 .DS_Store
 .env.local
 .env.development.local
@@ -22,4 +22,7 @@ safelist.txt
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-git
+
+# src/index.css
+# src/*.css
+# index.css

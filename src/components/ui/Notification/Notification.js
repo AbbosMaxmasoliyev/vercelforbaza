@@ -52,7 +52,7 @@ const Notification = React.forwardRef((props, ref) => {
 				{
 					type && !customIcon? (
 						<div className="mr-3">
-							<StatusIcon type={type} />
+							<StatusIcon type={type}  />
 						</div>
 					) 
 					: 

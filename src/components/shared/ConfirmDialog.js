@@ -1,14 +1,14 @@
 import React from 'react'
-import { 
-	HiCheckCircle, 
-	HiOutlineInformationCircle, 
-	HiOutlineExclamation, 
-	HiOutlineExclamationCircle 
+import {
+	HiCheckCircle,
+	HiOutlineInformationCircle,
+	HiOutlineExclamation,
+	HiOutlineExclamationCircle
 } from 'react-icons/hi'
 import { Avatar, Button, Dialog, } from 'components/ui'
 import PropTypes from 'prop-types'
 
-const StatusIcon = ({status}) => {
+const StatusIcon = ({ status }) => {
 
 	switch (status) {
 		case 'info':
@@ -35,7 +35,7 @@ const StatusIcon = ({status}) => {
 					<span className="text-2xl"><HiOutlineExclamation /></span>
 				</Avatar>
 			)
-	
+
 		default:
 			return null
 	}
@@ -43,26 +43,26 @@ const StatusIcon = ({status}) => {
 
 const ConfirmDialog = props => {
 
-	const { 
-		type, 
-		title, 
+	const {
+		type,
+		title,
 		children,
 		onCancel,
 		onConfirm,
 		cancelText,
 		confirmText,
-		confirmButtonColor,
+		confirmButton,
 		...rest
 	} = props
 
 	const handleCancel = () => {
 		onCancel?.()
-	} 
+	}
 
 	const handleConfirm = () => {
 		onConfirm?.()
 	}
- 
+
 	return (
 		<Dialog
 			style={{
@@ -81,18 +81,18 @@ const ConfirmDialog = props => {
 				</div>
 			</div>
 			<div className="text-right px-6 py-3 bg-gray-100 dark:bg-gray-700 rounded-bl-lg rounded-br-lg">
-				<Button 
-					size="sm" 
-					className="ltr:mr-2 rtl:ml-2" 
+				<Button
+					size="sm"
+					className="ltr:mr-2 rtl:ml-2"
 					onClick={handleCancel}
 				>
 					{cancelText}
 				</Button>
-				<Button 
-					size="sm" 
+				<Button
+					size="sm"
 					variant="solid"
 					onClick={handleConfirm}
-					color={confirmButtonColor}
+					color={confirmButton ? confirmButton : "red"}
 				>
 					{confirmText}
 				</Button>
@@ -109,6 +109,7 @@ ConfirmDialog.defaultProps = {
 	type: 'info',
 	cancelText: 'Cancel',
 	confirmText: 'Confirm',
+	confirmButtonColor: "blue"
 }
 
 

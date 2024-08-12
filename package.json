@@ -92,10 +92,12 @@
     "remark-html": "^16.0.1",
     "remark-stringify": "^11.0.0",
     "sha1": "^1.1.1",
+    "simplebar-react": "^3.2.6",
     "source-map-explorer": "^2.5.2",
     "tailwind-safelist-generator": "^0.1.2",
     "twin.macro": "^3.0.0-rc.1",
     "web-vitals": "^2.1.4",
+    "yarn": "^1.22.22",
     "yup": "^0.32.10",
     "zustand": "^4.4.1"
   },
