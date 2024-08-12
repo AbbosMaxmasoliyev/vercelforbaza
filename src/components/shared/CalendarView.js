@@ -1,14 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { Badge } from 'components/ui'
-import FullCalendar from "@fullcalendar/react"
-import dayGridPlugin from "@fullcalendar/daygrid"
-import timeGridPlugin from "@fullcalendar/timegrid"
-import interactionPlugin from '@fullcalendar/interaction'
 
-import "@fullcalendar/common/main.css"
-import "@fullcalendar/daygrid/main.css"
-import "@fullcalendar/timegrid/main.css"
 
 export const eventColors = {
 	red: { bg: 'bg-red-50 dark:bg-red-500/10', text: 'text-red-500 dark:text-red-100', dot: 'bg-red-500' },
@@ -35,7 +28,7 @@ const CalendarView = props => {
 
 	return (
 		<div className={classNames('calendar', wrapperClass)}>
-			<FullCalendar
+			{/* <FullCalendar
 				initialView="dayGridMonth"
 				headerToolbar={{
 					left:   'title',
@@ -77,7 +70,7 @@ const CalendarView = props => {
 				}}
 				plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
 				{...rest}
-			/>
+			/> */}
 		</div>
 	)
 }
