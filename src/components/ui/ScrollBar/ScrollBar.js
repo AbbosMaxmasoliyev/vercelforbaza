@@ -1,25 +1,20 @@
-import React, { forwardRef } from 'react'
-import { Scrollbars } from 'react-custom-scrollbars'
+import React, { forwardRef } from 'react';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
 
 const ScrollBar = forwardRef((props, ref) => {
+    const { direction = 'ltr', ...rest } = props;
 
-	const { direction = 'ltr', ...rest } = props
+    return (
+        <SimpleBar
+            ref={ref}
+            style={{
+                direction: direction === 'rtl' ? 'rtl' : 'ltr',
+                ...rest.style,
+            }}
+            {...rest}
+        />
+    );
+});
 
-	return (
-		<Scrollbars
-			ref={ref}
-			renderView={props => (
-				<div 
-					{...props} 
-					style={{ 
-						...props.style, 
-						...(direction === 'rtl' && { marginLeft: props.style.marginRight, marginRight: 0}) 
-					}}
-				/> 
-			)} 
-			{...rest} 
-		/>
-	)
-})
-
-export default ScrollBar
+export default ScrollBar;
